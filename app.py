@@ -34,3 +34,35 @@ st.line_chart(data=None, width=0, height=0, use_container_width=True)
 #Area Chart
 st.area_chart(data=None, width=0, height=0, use_container_width=True)
 
+
+import plotly.express as px
+import seaborn as sns
+#Scatter Chart
+fig = px.scatter(filtered_df,
+x="Logged GDP per capita",
+y="Healthy life expectancy",
+size="Ladder score",
+color="Regional indicator",
+hover_name="Country name",
+size_max=10)
+st.write(fig)
+#Bar Chart, you can write in this way too
+st.write(px.bar(filtered_df, y='Ladder score', x='Country name'))
+#Seaborn Heatmap
+#correlate data
+corr = filtered_df.corr()
+#using matplotlib to define the size
+plt.figure(figsize=(8, 8))
+#creating the heatmap with seaborn
+fig1 = plt.figure()
+ax = sns.heatmap(corr,
+vmin=-1, vmax=1, center=0,
+cmap=sns.diverging_palette(20, 220, n=200),
+square=True
+)
+ax.set_xticklabels(
+ax.get_xticklabels(),
+rotation=45,
+horizontalalignment='right'
+);
+st.pyplot(fig1)
