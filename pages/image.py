@@ -7,7 +7,7 @@ import pandas as pd
 sns.set(font_scale=2)
 
 st.title('AI for Images!📷')
-st.markdown('**画像**向けのAIデモページです！')
+st.markdown('**画像**向けのAIデモページだよ！')
 input_file = st.file_uploader(label='Upload Image File!',type=['png','jpg'])
 
 clm1, clm2 = st.columns([1, 1.5])
