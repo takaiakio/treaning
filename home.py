@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.title('はじめてのStreamlit!')
+st.title('もう何度目かのStreamlit!')
 st.markdown(
     '''
-    これは私が**初めて**Streamlitで作ったアプリです！
+    私はアプリ作成を練習しています!
     '''
 )
 with st.sidebar:
