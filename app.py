@@ -1,6 +1,8 @@
 import streamlit as st
 uploaded_file = st.file_uploader("アクセスログをアップロードしてください。")
 
+
+
 import pandas as pd
 if uploaded_file is not None:
     df = pd.read_csv(
@@ -23,15 +25,3 @@ if st.checkbox('Show dataframe'):
         columns=['a', 'b', 'c']
     )
     st.line_chart(chart_data)
-
-chart_data = pd.DataFrame(
-     np.random.randn(20, 3),
-     columns=['a', 'b', 'c']
- )
-st.line_chart(chart_data)
-
-map_data = pd.DataFrame(
-    np.random.randn(500, 2) / [50, 50] + [37.6336, 138.9718],
-    columns=['lat', 'lon']
-)
-st.map(map_data)
