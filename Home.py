@@ -47,3 +47,17 @@ fig = alt.Chart(source).mark_circle(size=60).encode(
 ).interactive()
 
 st.write(fig)
+
+
+answer = st.button('Say hello')
+
+if answer == True:
+     st.write('Why hello there')
+else:
+     st.write('Goodbye')
+
+
+agree = st.checkbox('I agree')
+
+if agree == True :
+     st.write('Great!')
