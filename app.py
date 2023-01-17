@@ -14,3 +14,7 @@ fig, ax = plt.subplots()
 ax.hist(arr, bins=20)
 
 fig
+
+import streamlit as st
+
+st.radio("好きなマイケルは？", ('ジャクソン', 'ジョーダン', 'ホフマン'))
