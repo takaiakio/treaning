@@ -1,4 +1,28 @@
 import streamlit as st
+import pandas as pd
+
+#For Excel File
+#df = pd.read_excel('world-happiness-report-2021.xlxs')
+
+#For CSV File
+#df = pd.read_csv("world-happiness-report-2021.csv")
+
+uploaded_file = st.file_uploader("アクセスログをアップロードしてください。")
+
+if uploaded_file is not None:
+    df = pd.read_csv(
+        uploaded_file,
+        engine='python',
+        na_values='-',
+        skipinitialspace=True,
+        )
+
+st.markdown('### アクセスログ（先頭5件）')
+st.write(df.head(5))
+
+
+
+
 
 st.title('World Happiness Index 2021:')
 st.sidebar.title('World Happiness Index 2021:')
@@ -7,16 +31,10 @@ st.image(
      caption='World Happiness Dataset'
     )
 
-import pandas as pd
-'''
-#For Excel File
-df = pd.read_excel('world-happiness-report-2021.xlxs')
-'''
-#For CSV File
-df = pd.read_csv("world-happiness-report-2021.csv")
 
 
-#Country Select Filter
+
+#Country Select Filterunt
 country_list = ["All","Western Europe", "South Asia", "Southeast Asia", "East Asia", "North America and ANZ","Middle East and North Africa", "Latin America and Caribbean","Central and Eastern Europe","Commonwealth of Independent States","Sub-Saharan Africa"]
 select = st.sidebar.selectbox('Filter the region here:', country_list, key='1')
 if select =="All":
@@ -25,7 +43,8 @@ else:
    filtered_df = df[df['Regional indicator']==select]
 #Ladder Score Slider
 score = st.sidebar.slider('Select min Ladder Score', min_value=5, max_value=10, value = 10) # Getting the input.
-df = df[df['Ladder score'] <= score] # Filtering the dataframe.
+
+df = df[df["Ladder score"] <= score] # Filtering the dataframe.
 
 #Line Chart
 st.line_chart(data=None, width=0, height=0, use_container_width=True)
