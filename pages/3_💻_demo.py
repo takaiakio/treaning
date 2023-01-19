@@ -29,7 +29,7 @@ st.markdown('''
   - 25g
 ''')
 
-@st.cache
+#@st.cache
 def rand_df(r=10, c=5):
     df = pd.DataFrame(
         np.random.randn(r, c),
