@@ -64,13 +64,13 @@ import matplotlib.pyplot as plt
 fig = px.scatter(filtered_df,
 x="Area1中",
 y="Area1最",
-size="Ladder score",
+size="Area4最",
 color="Regional indicator",
 hover_name="Country name",
 size_max=10)
 st.write(fig)
 #Bar Chart, you can write in this way too
-st.write(px.bar(filtered_df, y='Ladder score', x='Country name'))
+st.write(px.bar(filtered_df, y='Area4最', x='Country name'))
 #Seaborn Heatmap
 #correlate data
 corr = filtered_df.corr()
