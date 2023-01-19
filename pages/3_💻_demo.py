@@ -48,7 +48,7 @@ else:
 #Ladder Score Slider
 score = st.sidebar.slider('Select min Ladder Score', min_value=5, max_value=10, value = 10) # Getting the input.
 
-df = df[df["Ladder score"] <= score] # Filtering the dataframe.
+df = df[df["Area4最"] <= score] # Filtering the dataframe.
 
 #Line Chart
 st.line_chart(data=None, width=0, height=0, use_container_width=True)
@@ -62,8 +62,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 #Scatter Chart
 fig = px.scatter(filtered_df,
-x="Logged GDP per capita",
-y="Healthy life expectancy",
+x="Area1中",
+y="Area1最",
 size="Ladder score",
 color="Regional indicator",
 hover_name="Country name",
