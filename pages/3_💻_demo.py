@@ -26,13 +26,14 @@ st.write(df.head(5))
 
 st.title('World Happiness Index 2021:')
 st.sidebar.title('World Happiness Index 2021:')
+"""
 st.image(
     'https://images.pexels.com/photos/573259/pexels-photo-573259.jpeg?cs=srgb&dl=pexels-matheus-bertelli-573259.jpg&fm=jpg', 
      caption='World Happiness Dataset'
     )
+"""
 
-
-
+st.image('Company.JPG')
 
 #Country Select Filterunt
 country_list = ["All","Western Europe", "South Asia", "Southeast Asia", "East Asia", "North America and ANZ","Middle East and North Africa", "Latin America and Caribbean","Central and Eastern Europe","Commonwealth of Independent States","Sub-Saharan Africa"]
