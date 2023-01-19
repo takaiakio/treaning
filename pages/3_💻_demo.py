@@ -15,6 +15,7 @@ if uploaded_file is not None:
         engine='python',
         na_values='-',
         skipinitialspace=True,
+        encoding="shift-jis"
         )
 
 #st.markdown('### アクセスログ（先頭5件）')
