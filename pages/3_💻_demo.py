@@ -11,7 +11,7 @@ if uploaded_file is not None:
         encoding='shift-jis',
         )
 
-df=pd.DataFrame(df)
+st.dataframe(df)
 
 
 
