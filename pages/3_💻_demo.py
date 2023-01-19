@@ -1,7 +1,7 @@
 import streamlit as st
+import pandas as pd
+
 uploaded_file = st.file_uploader("アクセスログをアップロードしてください。")
-
-
 import pandas as pd
 if uploaded_file is not None:
     df = pd.read_csv(
@@ -11,5 +11,13 @@ if uploaded_file is not None:
         encoding='shift-jis',
         )
 
-st.markdown('### アクセスログ（先頭5件）')
-st.write(df.head(5))
+df=pd.DataFrame(df)
+
+
+
+st.line_chart(data = df,width = 0,height = 0,use_container_width = True)
+
+
+
+
+
