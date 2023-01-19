@@ -8,7 +8,7 @@ if uploaded_file is not None:
         uploaded_file,
         engine='python',
         na_values='-',
-        encoding='shft-jis',
+        encoding='shift-jis',
         )
 
 st.markdown('### アクセスログ（先頭5件）')
