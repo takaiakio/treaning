@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.title('はじめてのStreamlit!')
+st.title('SED生産計画展開アプリ!')
 st.markdown(
     '''
-    これは私が**初めて**Streamlitで作ったアプリです！
+    週次計画をDaily計画に落とし込みます!
     '''
 )
 with st.sidebar:
