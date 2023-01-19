@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title('SED生産計画展開アプリ!')
+st.title('基板トレサビリティ台帳管理!')
 st.markdown(
     '''
     週次計画をDaily計画に落とし込みます!
