@@ -29,7 +29,7 @@ st.markdown('''
   - 25g
 ''')
 
-#@st.cache
+@st.cache
 def rand_df(r=10, c=5):
     df = pd.DataFrame(
         np.random.randn(r, c),
@@ -50,8 +50,6 @@ p = st.sidebar.slider('確率の設定', min_value=0.0, max_value=1.0, value=0.8
 st.sidebar.write(f'設定値は {p} です')
 
 
-
-st.line_chart(data = df,width = 0,height = 0,use_container_width = True)
 
 
 
