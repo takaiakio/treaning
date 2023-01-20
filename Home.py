@@ -1,9 +1,15 @@
 import streamlit as st
 
-st.title('基板トレサビリティ台帳管理!')
+st.title('WEBアプリ工事中!')
 st.markdown(
     '''
-    週次計画をDaily計画に落とし込みます!
+    ただいまデータ分析ツールを作成しているところです。
+    しばらくお待ちください。
+
+    
+    
+    
+                                        管理人より　2022/1/20
     '''
 )
 with st.sidebar:
