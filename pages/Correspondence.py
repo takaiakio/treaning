@@ -1,9 +1,9 @@
 import streamlit as st
 import mca
 import pandas as pd
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import plotly.express as px
-import japanize_matplotlib as plt
+import japanize_matplotlib
 
 st.title('コレスポンデンス分析')
 
