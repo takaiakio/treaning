@@ -33,12 +33,12 @@ csv = df.to_csv(index=False)
 b64 = base64.b64encode(csv.encode()).decode()
 href = f'<a href="data:application/octet-stream;base64,{b64}" download="result_utf-8.csv">Download Link</a>'
 st.markdown(f"CSVファイルのダウンロード(utf-8):  {href}", unsafe_allow_html=True)
-'''
+
 # utf-8(BOM)
 b64 = base64.b64encode(csv.encode('utf-8-sig')).decode()
 href = f'<a href="data:application/octet-stream;base64,{b64}" download="result_utf-8-sig.csv">Download Link</a>'
 st.markdown(f"CSVファイルのダウンロード(utf-8 BOM):  {href}", unsafe_allow_html=True)
-
+'''
 mca_counts = mca.MCA(df, benzecri=False)#benzecri=Falseにしないと固有値が0になってしまう
 rws = mca_counts.fs_r(N=2) #商品（行）の成分スコア　Nは保持する成分の数
 cols = mca_counts.fs_c(N=2) #イメージ（列）の成分スコア　Nは保持する成分の数
