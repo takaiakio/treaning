@@ -34,8 +34,8 @@ ax = plt.axes() #わからない3
 #グラフのレイアウトを設定
 plt.axhline(0, color='gray') #横線
 plt.axvline(0, color='gray') #縦線
-plt.xlabel('成分1', fontname='MS Gothic') #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
-plt.ylabel('成分2', fontname='MS Gothic') #Y軸のラベル
+japanize_matplotlib.xlabel('成分1', fontname='MS Gothic') #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
+japanize_matplotlib.ylabel('成分2', fontname='MS Gothic') #Y軸のラベル
 
 
 #商品（行）のプロット
