@@ -9,5 +9,6 @@ pycountry==22.3.5
 woothee==1.10.1
 pytz==2022.7
 plotly_express==0.4.1
+mca==1.0.3
 
 
