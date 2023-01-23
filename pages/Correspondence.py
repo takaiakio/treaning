@@ -22,7 +22,7 @@ if uploaded_file is not None:
         encoding='shift-jis',
         )
 
-st.markdown('### ↓アクセスログ（先頭5件）')
+st.markdown('### ↓アクセスログ')
 st.dataframe(df)
 
 '''
