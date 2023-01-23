@@ -25,11 +25,12 @@ if uploaded_file is not None:
 st.markdown('### ↓アクセスログ（先頭5件）')
 st.dataframe(df)
 
+'''
 st.table(df)
 csv = df.to_csv(index=False)  
 
 # utf-8
-'''
+
 b64 = base64.b64encode(csv.encode()).decode()
 href = f'<a href="data:application/octet-stream;base64,{b64}" download="result_utf-8.csv">Download Link</a>'
 st.markdown(f"CSVファイルのダウンロード(utf-8):  {href}", unsafe_allow_html=True)
