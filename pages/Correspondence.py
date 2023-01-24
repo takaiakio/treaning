@@ -36,18 +36,6 @@ cols = mca_counts.fs_c(N=2) #イメージ（列）の成分スコア　Nは保�
 fig = plt.figure(figsize=(8,8)) #わからない2
 ax = plt.axes() #わからない3
 #グラフのレイアウトを設定
-# x 軸 (major) の目盛りを設定する。
-ax.set_xticks(np.linspace(-1, 1, 5))
-
-# x 軸 (minor) の目盛りを設定する。
-ax.set_xticks(np.linspace(-1,1, 5), minor=True)
-
-# y 軸 (major) の目盛りを設定する。
-ax.set_yticks(np.linspace(-1, 1, 5))
-
-# y 軸 (minor) の目盛りを設定する。
-ax.set_yticks(np.linspace(-1, 1, 5), minor=True)
-
 plt.axhline(0, color='gray') #横線
 plt.axvline(0, color='gray') #縦線
 plt.xlabel('成分1', fontname="IPAexGothic",fontsize=15) #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
@@ -66,5 +54,18 @@ plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=5)
 labels = df.columns
 for label,x,y in zip(labels,cols[:,0],cols[:,1]):
     plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=10,color = 'c')
+
+
+# x 軸 (major) の目盛りを設定する。
+ax.set_xticks(np.linspace(-1, 1, 5))
+
+# x 軸 (minor) の目盛りを設定する。
+ax.set_xticks(np.linspace(-1,1, 5), minor=True)
+
+# y 軸 (major) の目盛りを設定する。
+ax.set_yticks(np.linspace(-1, 1, 5))
+
+# y 軸 (minor) の目盛りを設定する。
+ax.set_yticks(np.linspace(-1, 1, 5), minor=True)
 
 st.pyplot(fig)
