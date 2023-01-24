@@ -51,6 +51,7 @@ plt.ylim(bottom=-1, top=1)
 # グラフタイトル
 plt.title('コレポン出力')
 
+'''
 #商品（行）のプロット
 plt.scatter(rws[:,0], rws[:,1], c='r',marker='s',s=10) #c:色、marker:マーク
 labels = df.index
@@ -63,7 +64,7 @@ plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=10)
 labels = df.columns
 for label,x,y in zip(labels,cols[:,0],cols[:,1]):
     plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=15,color = 'c')
-'''
+
 
 # x 軸 (major) の目盛りを設定する。
 #ax.set_xticks(np.linspace(-1, 1, 5))
