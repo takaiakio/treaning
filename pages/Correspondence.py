@@ -52,17 +52,17 @@ plt.ylim(bottom=-1, top=1)
 plt.title('コレポン出力')
 
 #商品（行）のプロット
-plt.scatter(rws[:,0], rws[:,1], c='r',marker='s') #c:色、marker:マーク
+plt.scatter(rws[:,0], rws[:,1], c='r',marker='s',s=10) #c:色、marker:マーク
 labels = df.index
 for label,x,y in zip(labels,rws[:,0],rws[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=10,color = 'b')
+    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=15,color = 'b')
 
 
 #イメージ（列）のプロット
-plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=5)
+plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=10)
 labels = df.columns
 for label,x,y in zip(labels,cols[:,0],cols[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=10,color = 'c')
+    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=15,color = 'c')
 
 
 # x 軸 (major) の目盛りを設定する。
