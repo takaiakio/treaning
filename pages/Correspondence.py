@@ -3,6 +3,7 @@ import mca
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
+import numpy as np
 #import japanize_matplotlib
 #import base64
 #plt.rcParams['font.family'] = 'IPAexGothic'
@@ -32,9 +33,21 @@ rws = mca_counts.fs_r(N=2) #商品（行）の成分スコア　Nは保持する
 cols = mca_counts.fs_c(N=2) #イメージ（列）の成分スコア　Nは保持する成分の数
 
 
-fig = plt.figure(figsize=(6,6)) #わからない2
+fig = plt.figure(figsize=(8,8)) #わからない2
 ax = plt.axes() #わからない3
 #グラフのレイアウトを設定
+# x 軸 (major) の目盛りを設定する。
+ax.set_xticks(np.linspace(-1, 1, 5))
+
+# x 軸 (minor) の目盛りを設定する。
+ax.set_xticks(np.linspace(-1,1, 25), minor=True)
+
+# y 軸 (major) の目盛りを設定する。
+ax.set_yticks(np.linspace(-1, 1, 5))
+
+# y 軸 (minor) の目盛りを設定する。
+ax.set_yticks(np.linspace(-1, 1, 25), minor=True)
+
 plt.axhline(0, color='gray') #横線
 plt.axvline(0, color='gray') #縦線
 plt.xlabel('成分1', fontname="IPAexGothic",fontsize=15) #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
