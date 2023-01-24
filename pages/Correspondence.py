@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import japanize_matplotlib
 import base64
-plt.rcParams['font.family'] = 'IPAexGothic'
+plt.rcParams['font.family'] = 'MS Gothic'
 
 st.title('コレスポンデンス分析')
 
@@ -50,8 +50,8 @@ ax = plt.axes() #わからない3
 #グラフのレイアウトを設定
 plt.axhline(0, color='gray') #横線
 plt.axvline(0, color='gray') #縦線
-plt.xlabel('成分1', fontname="IPAexGothic",fontsize=10) #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
-plt.ylabel('成分2', fontname="IPAexGothic",fontsize=10) #Y軸のラベル
+plt.xlabel('成分1', fontname="IPAexGothic",fontsize=15) #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
+plt.ylabel('成分2', fontname="IPAexGothic",fontsize=15) #Y軸のラベル
 
 
 #商品（行）のプロット
