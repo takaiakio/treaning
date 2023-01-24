@@ -40,13 +40,13 @@ ax = plt.axes() #わからない3
 ax.set_xticks(np.linspace(-1, 1, 5))
 
 # x 軸 (minor) の目盛りを設定する。
-ax.set_xticks(np.linspace(-1,1, 25), minor=True)
+ax.set_xticks(np.linspace(-1,1, 5), minor=True)
 
 # y 軸 (major) の目盛りを設定する。
 ax.set_yticks(np.linspace(-1, 1, 5))
 
 # y 軸 (minor) の目盛りを設定する。
-ax.set_yticks(np.linspace(-1, 1, 25), minor=True)
+ax.set_yticks(np.linspace(-1, 1, 5), minor=True)
 
 plt.axhline(0, color='gray') #横線
 plt.axvline(0, color='gray') #縦線
