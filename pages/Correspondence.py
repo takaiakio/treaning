@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 #import japanize_matplotlib
 #import base64
-plt.rcParams['font.family'] = 'IPAexGothic'
+#plt.rcParams['font.family'] = 'IPAexGothic'
 
 st.title('コレスポンデンス分析')
 
@@ -37,21 +37,21 @@ ax = plt.axes() #わからない3
 #グラフのレイアウトを設定
 plt.axhline(0, color='gray') #横線
 plt.axvline(0, color='gray') #縦線
-plt.xlabel('成分1', fontname="MS Gothic",fontsize=15) #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
-plt.ylabel('成分2', fontname="MS Gothic",fontsize=15) #Y軸のラベル
+plt.xlabel('成分1', fontname="IPAexGothic",fontsize=15) #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
+plt.ylabel('成分2', fontname="IPAexGothic",fontsize=15) #Y軸のラベル
 
 
 #商品（行）のプロット
 plt.scatter(rws[:,0], rws[:,1], c='r',marker='s') #c:色、marker:マーク
 labels = df.index
 for label,x,y in zip(labels,rws[:,0],rws[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="MS Gothic",fontsize=10,color = 'b')
+    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=10,color = 'b')
 
 
 #イメージ（列）のプロット
 plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=5)
 labels = df.columns
 for label,x,y in zip(labels,cols[:,0],cols[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="MS Gothic",fontsize=10,color = 'c')
+    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=10,color = 'c')
 
 st.pyplot(fig)
