@@ -58,13 +58,13 @@ plt.ylabel('成分2', fontname="IPAexGothic") #Y軸のラベル
 plt.scatter(rws[:,0], rws[:,1], c='r',marker='s') #c:色、marker:マーク
 labels = df.index
 for label,x,y in zip(labels,rws[:,0],rws[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",color = 'b')
+    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=10,color = 'b')
 
 
 #イメージ（列）のプロット
 plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=5)
 labels = df.columns
 for label,x,y in zip(labels,cols[:,0],cols[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=8,color = 'c')
+    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=10,color = 'c')
 
 st.pyplot(fig)
