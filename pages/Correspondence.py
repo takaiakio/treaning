@@ -33,7 +33,7 @@ rws = mca_counts.fs_r(N=2) #商品（行）の成分スコア　Nは保持する
 cols = mca_counts.fs_c(N=2) #イメージ（列）の成分スコア　Nは保持する成分の数
 
 
-fig = plt.figure(figsize=(10,10)) #わからない2
+fig = plt.figure(figsize=(12,12)) #サイズの調整
 ax = plt.axes() #わからない3
 #グラフのレイアウトを設定
 plt.axhline(0, color='gray') #横線
