@@ -41,6 +41,15 @@ plt.axvline(0, color='gray') #縦線
 plt.xlabel('成分1', fontname="IPAexGothic",fontsize=15) #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
 plt.ylabel('成分2', fontname="IPAexGothic",fontsize=15) #Y軸のラベル
 
+# grid表示
+plt.grid(True)
+
+# 範囲
+plt.xlim(left=-1, right=1)
+plt.ylim(bottom=-1, top=1)
+
+# グラフタイトル
+plt.title('コレポン出力')
 
 #商品（行）のプロット
 plt.scatter(rws[:,0], rws[:,1], c='r',marker='s') #c:色、marker:マーク
@@ -57,15 +66,15 @@ for label,x,y in zip(labels,cols[:,0],cols[:,1]):
 
 
 # x 軸 (major) の目盛りを設定する。
-ax.set_xticks(np.linspace(-1, 1, 5))
+#ax.set_xticks(np.linspace(-1, 1, 5))
 
 # x 軸 (minor) の目盛りを設定する。
-ax.set_xticks(np.linspace(-1,1, 5), minor=True)
+#ax.set_xticks(np.linspace(-1,1, 5), minor=True)
 
 # y 軸 (major) の目盛りを設定する。
-ax.set_yticks(np.linspace(-1, 1, 5))
+#ax.set_yticks(np.linspace(-1, 1, 5))
 
 # y 軸 (minor) の目盛りを設定する。
-ax.set_yticks(np.linspace(-1, 1, 5), minor=True)
+#ax.set_yticks(np.linspace(-1, 1, 5), minor=True)
 
 st.pyplot(fig)
