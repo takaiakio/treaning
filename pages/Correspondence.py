@@ -60,10 +60,10 @@ for label,x,y in zip(labels,rws[:,0],rws[:,1]):
 '''
 
 #イメージ（列）のプロット
-plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=10)
+plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=20)
 labels = df.columns
 for label,x,y in zip(labels,cols[:,0],cols[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=15,color = 'c')
+    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=20,color = 'c')
 
 
 # x 軸 (major) の目盛りを設定する。
