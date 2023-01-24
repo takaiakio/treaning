@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 #import japanize_matplotlib
 #import base64
-plt.rcParams['font.family'] = 'MS Gothic'
+plt.rcParams['font.family'] = 'IPAexGothic'
 
 st.title('コレスポンデンス分析')
 
