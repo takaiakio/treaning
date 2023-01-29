@@ -66,6 +66,7 @@ for label,x,y in zip(labels,cols[:,0],cols[:,1]):
     plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=20,color = 'c')
 
 
+
 # x 軸 (major) の目盛りを設定する。
 #ax.set_xticks(np.linspace(-1, 1, 5))
 
