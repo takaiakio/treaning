@@ -6,7 +6,7 @@ import plotly.express as px
 #import numpy as np
 #import japanize_matplotlib
 #import base64
-#plt.rcParams['font.family'] = 'MS Gothic'
+#plt.rcParams['font.family'] = 'IPAPGothic'
 
 st.title('コレスポンデンス分析')
 
@@ -38,8 +38,8 @@ ax = plt.axes() #わからない3
 #グラフのレイアウトを設定
 plt.axhline(0, color='gray') #横線
 plt.axvline(0, color='gray') #縦線
-plt.xlabel('成分1', fontname="MS Gothic",fontsize=15) #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
-plt.ylabel('成分2', fontname="MS Gothic",fontsize=15) #Y軸のラベル
+plt.xlabel('成分1', fontname="IPAPGothic",fontsize=15) #X軸のラベル fontname：日本語の文字化け防止にフォントを指定
+plt.ylabel('成分2', fontname="IPAPGothic",fontsize=15) #Y軸のラベル
 
 # grid表示
 plt.grid(True)
@@ -49,21 +49,21 @@ plt.xlim(left=-1, right=1)
 plt.ylim(bottom=-1, top=1)
 
 # グラフタイトル
-plt.title('コレポン出力', fontname="MS Gothic",fontsize=15)
+plt.title('コレポン出力', fontname="IPAPGothic",fontsize=15)
 
 '''
 #商品（行）のプロット
 plt.scatter(rws[:,0], rws[:,1], c='r',marker='s',s=10) #c:色、marker:マーク
 labels = df.index
 for label,x,y in zip(labels,rws[:,0],rws[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="MS Gothic",fontsize=15,color = 'b')
+    plt.annotate(label, xy=(x, y), fontname="IPAPGothic",fontsize=15,color = 'b')
 '''
 
 #イメージ（列）のプロット
 plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=20)
 labels = df.columns
 for label,x,y in zip(labels,cols[:,0],cols[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="MS Gothic",fontsize=20,color = 'c')
+    plt.annotate(label, xy=(x, y), fontname="IPAPGothic",fontsize=20,color = 'c')
 
 
 
