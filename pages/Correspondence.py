@@ -48,7 +48,6 @@ plt.grid(True)
 plt.xlim(left=-1, right=1)
 plt.ylim(bottom=-1, top=1)
 
-
 # グラフタイトル
 plt.title('コレポン出力', fontname="IPAPGothic",fontsize=15)
 
