@@ -4,9 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 #import numpy as np
-#import japanize_matplotlib
+import japanize_matplotlib
 #import base64
-#plt.rcParams['font.family'] = 'IPAPGothic'
+plt.rcParams['font.family'] = 'IPAPGothic'
 
 st.title('コレスポンデンス分析')
 
