@@ -80,3 +80,4 @@ for label,x,y in zip(labels,cols[:,0],cols[:,1]):
 #ax.set_yticks(np.linspace(-1, 1, 5), minor=True)
 
 st.pyplot(fig)
+
