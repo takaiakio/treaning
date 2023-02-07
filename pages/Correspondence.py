@@ -45,8 +45,8 @@ plt.ylabel('成分2', fontname="IPAexGothic",fontsize=15) #Y軸のラベル
 plt.grid(True)
 
 # 軸範囲
-plt.xlim(left=-2, right=2)
-plt.ylim(bottom=-2, top=2)
+plt.xlim(left=-1.5, right=1.5)
+plt.ylim(bottom=-1.5, top=1.5)
 
 # グラフタイトル
 plt.title('コレポン出力', fontname="IPAexGothic",fontsize=15)
