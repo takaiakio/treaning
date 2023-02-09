@@ -56,7 +56,7 @@ plt.title('コレポン出力', fontname="IPAexGothic",fontsize=15)
 plt.scatter(rws[:,0], rws[:,1], c='r',marker='s',s=100) #c:色、marker:マーク
 labels = df.index
 for label,x,y in zip(labels,rws[:,0],rws[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=15,color = 'b')
+    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=30,color = 'b')
 
 
 #イメージ（列）のプロット
