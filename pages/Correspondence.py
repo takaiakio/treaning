@@ -63,7 +63,7 @@ for label,x,y in zip(labels,rws[:,0],rws[:,1]):
 plt.scatter(cols[:,0], cols[:,1], c='c',marker='o',s=100)
 labels = df.columns
 for label,x,y in zip(labels,cols[:,0],cols[:,1]):
-    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=30,color = 'c')
+    plt.annotate(label, xy=(x, y), fontname="IPAexGothic",fontsize=25,color = 'c')
 
 
 
