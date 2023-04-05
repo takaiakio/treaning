@@ -12,7 +12,7 @@ import sys
 
 st.title('週次計画展開')
 
-''''uploaded_file = st.file_uploader("週次計画ファイル.xlsxをアップロードしてください。")
+'''uploaded_file = st.file_uploader("週次計画ファイル.xlsxをアップロードしてください。")
 
 if uploaded_file is not None:
     df = pd.read_excel(uploaded_file, sheet_name='顧客要求、生産計画 ')
