@@ -9,7 +9,7 @@ st.markdown(
     
     
     
-                                        管理人より　2022/2/6
+                                        管理人より　2023/4/5
     '''
 )
 with st.sidebar:
