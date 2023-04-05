@@ -7,10 +7,12 @@ import pandas as pd
 import msoffcrypto
 from pathlib import WindowsPath
 import tempfile
+import xlrd
 
+st.title('週次計画展開')
 
 #'2022-12-12 00:00:00'
-input_text = st.text_input(label='ここに日付を入力してください')
+input_text = st.text_input(label='ここに日付を入力してください yyyy-mm-dd 00:00:00')
 button_click = st.button('実行')
 
 if button_click:
