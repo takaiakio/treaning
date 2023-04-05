@@ -11,6 +11,15 @@ import xlrd
 
 st.title('週次計画展開')
 
+uploaded_file = st.file_uploader("週次計画ファイル.xlsxをアップロードしてください。")
+
+if uploaded_file is not None:
+    df = pd.read_excel(uploaded_file, sheet_name='顧客要求、生産計画 ')
+
+st.markdown('### ↓アクセスログ')
+st.dataframe(df)
+
+
 #'2022-12-12 00:00:00'
 input_text = st.text_input(label='ここに日付を入力してください yyyy-mm-dd 00:00:00')
 button_click = st.button('実行')
