@@ -21,7 +21,7 @@ if button_click:
         # パスワード
         PASSWORD = "3239"
         # 暗号化されたファイル
-        encrypted_file_name = "C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\ＰＫＧ 週次計画_221121マクロVer9.04.xlsm"
+        encrypted_file_name = "C:\\Users\\ALJP18540403\\Desktop\\改善人間\瞳依頼\\2022\\1208\\ＰＫＧ 週次計画_221121マクロVer9.04.xlsm"
         # 復号化して保存するファイル
         decrypted_file_name = "C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\ＰＫＧ 週次計画_221121マクロVer9.04パスワード解除後.xlsm"
         
