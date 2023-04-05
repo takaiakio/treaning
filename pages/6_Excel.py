@@ -8,16 +8,17 @@ import msoffcrypto
 from pathlib import WindowsPath
 import tempfile
 import xlrd
+import sys
 
 st.title('週次計画展開')
 
-"""uploaded_file = st.file_uploader("週次計画ファイル.xlsxをアップロードしてください。")
+''''uploaded_file = st.file_uploader("週次計画ファイル.xlsxをアップロードしてください。")
 
 if uploaded_file is not None:
     df = pd.read_excel(uploaded_file, sheet_name='顧客要求、生産計画 ')
 
 st.markdown('### ↓アクセスログ')
-st.dataframe(df)"""
+st.dataframe(df)'''
 
 
 #'2022-12-12 00:00:00'
@@ -65,9 +66,38 @@ if button_click:
              #print(str(j)+retsu)
              break
 
-        st.markdown(f'{input_text}"の判定結果は"{str(j)+retsu}')
+        #st.markdown(f'{input_text}"の判定結果は"{str(j)+retsu}')
+        for k in range(24,56):
+            cell_value = sheet_0.cell(row=k, column=1).value
+            if cell_value=="HGARAN008A":
+            #gyo='行目です'
+            #print(str(k)+gyo)
+             break
 
+        for l in range(150,188):
+            cell_value = sheet_0.cell(row=k-3, column=l).value
+
+            if cell_value==pd.to_datetime(input_text):
+
+            #retsu='列目です'
+            #print(str(l)+retsu)
+             break
+
+        n=0
+        for m in range(j,j+24):
+            
+            bachelor = sheet_1.cell(row = i, column = m).value
+            sheet_0.cell(row = k, column = l+n, value = bachelor)
+            n += 1
+        workbook_0.save(filename = 'C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\PKG週次計画_221121マクロVer9.04入力後.xlsx'
+                                    )
+        st.markdown(f'{input_text}"の展開は完了しました！"')
 
     else:
         st.markdown(f'日付を入力してから実行ボタンを押して下さい')
+        sys.exit()
+
+
+
+
 
