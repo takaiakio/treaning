@@ -15,6 +15,7 @@ st.title('週次計画展開')
 
 option=('C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\PKG週次計画_221121マクロVer9.04.xlsm',
         'C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\MAGIC週次計画_221118(金).xlsx',
+        range(3,11),
         )
 sel=st.selectbox('ファイルを選択していください',option)
 'あなたが選んだファイルは',sel,'です。'
