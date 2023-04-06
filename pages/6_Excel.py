@@ -19,9 +19,9 @@ option=('C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\
 sel=st.selectbox('ファイルを選択していください',option)
 'あなたが選んだファイルは',sel,'です。'
 
-if st.button('表示する'):
+'''if st.button('表示する'):
     df = pd.read_excel(sel,sheet_name='ＡＳＥ Goma')
-    st.table(df)
+    st.table(df)'''
 
 #'2022-12-12 00:00:00'
 input_text = st.text_input(label='ここに日付を入力してください yyyy-mm-dd 00:00:00')
