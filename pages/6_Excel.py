@@ -1,6 +1,5 @@
 
 import streamlit as st
-
 import openpyxl
 import datetime
 import pandas as pd
@@ -12,13 +11,12 @@ import sys
 
 st.title('週次計画展開')
 
-'''uploaded_file = st.file_uploader("週次計画ファイル.xlsxをアップロードしてください。")
+option=('C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\PKG週次計画_221121マクロVer9.04.xlsm',
+        'C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\MAGIC週次計画_221118(金).xlsx',
+        )
+sel=st.selectbox('ファイルを選択していください',option)
+'あなたが選んだファイルは',sel,'です。'
 
-if uploaded_file is not None:
-    df = pd.read_excel(uploaded_file, sheet_name='顧客要求、生産計画 ')
-
-st.markdown('### ↓アクセスログ')
-st.dataframe(df)'''
 
 
 #'2022-12-12 00:00:00'
@@ -31,9 +29,9 @@ if button_click:
         # パスワード
         PASSWORD = "3239"
         # 暗号化されたファイル
-        encrypted_file_name = "C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\PKG週次計画_221121マクロVer9.04.xlsm"
+        encrypted_file_name = sel
         # 復号化して保存するファイル
-        decrypted_file_name = "C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\PKG週次計画_221121マクロVer9.04パスワード解除後.xlsm"
+        decrypted_file_name = sel+"パスワード解除後.xlsm"
         
         # 暗号化ファイルを開く
         f = open(encrypted_file_name, "rb")
@@ -89,7 +87,7 @@ if button_click:
             bachelor = sheet_1.cell(row = i, column = m).value
             sheet_0.cell(row = k, column = l+n, value = bachelor)
             n += 1
-        workbook_0.save(filename = 'C:\\Users\\ALJP18540403\\Desktop\\改善人間\\瞳依頼\\2022\\1208\\PKG週次計画_221121マクロVer9.04入力後.xlsx'
+        workbook_0.save(filename = sel+'入力後.xlsx'
                                     )
         st.markdown(f'{input_text}"の展開は完了しました！"')
 
